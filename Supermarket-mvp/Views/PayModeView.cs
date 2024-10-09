@@ -21,7 +21,7 @@ namespace Supermarket_mvp.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
 
-            tabControl1.TabPages.Remove(tabPagePayModeDetail)
+            tabControl1.TabPages.Remove(tabPagePayModeDetail);
         }
 
         private void AssociateAndRaiseViewEvents()
