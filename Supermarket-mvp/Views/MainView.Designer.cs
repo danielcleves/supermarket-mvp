@@ -74,6 +74,7 @@
             Controls.Add(panel1);
             Name = "MainView";
             Text = "Supermarket";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
