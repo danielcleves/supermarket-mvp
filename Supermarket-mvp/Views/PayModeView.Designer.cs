@@ -32,7 +32,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             tabControl1 = new TabControl();
-            tabPageModeList = new TabPage();
+            tabPagePayModeList = new TabPage();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
@@ -42,18 +42,18 @@
             TxtSearch = new TextBox();
             label2 = new Label();
             tabPagePayModeDetail = new TabPage();
+            BtnCancel = new Button();
+            BtnSave = new Button();
             TxtPayModeObservation = new TextBox();
             label5 = new Label();
             TxtPayModeName = new TextBox();
             label4 = new Label();
             TxtPayModeId = new TextBox();
             label3 = new Label();
-            BtnSave = new Button();
-            BtnCancel = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
-            tabPageModeList.SuspendLayout();
+            tabPagePayModeList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).BeginInit();
             tabPagePayModeDetail.SuspendLayout();
             SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPageModeList);
+            tabControl1.Controls.Add(tabPagePayModeList);
             tabControl1.Controls.Add(tabPagePayModeDetail);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 150);
@@ -99,23 +99,23 @@
             tabControl1.Size = new Size(856, 517);
             tabControl1.TabIndex = 1;
             // 
-            // tabPageModeList
+            // tabPagePayModeList
             // 
-            tabPageModeList.Controls.Add(BtnClose);
-            tabPageModeList.Controls.Add(BtnDelete);
-            tabPageModeList.Controls.Add(BtnEdit);
-            tabPageModeList.Controls.Add(BtnNew);
-            tabPageModeList.Controls.Add(DgPayMode);
-            tabPageModeList.Controls.Add(BtnSearch);
-            tabPageModeList.Controls.Add(TxtSearch);
-            tabPageModeList.Controls.Add(label2);
-            tabPageModeList.Location = new Point(4, 34);
-            tabPageModeList.Name = "tabPageModeList";
-            tabPageModeList.Padding = new Padding(3);
-            tabPageModeList.Size = new Size(848, 479);
-            tabPageModeList.TabIndex = 0;
-            tabPageModeList.Text = "Pay Mode List";
-            tabPageModeList.UseVisualStyleBackColor = true;
+            tabPagePayModeList.Controls.Add(BtnClose);
+            tabPagePayModeList.Controls.Add(BtnDelete);
+            tabPagePayModeList.Controls.Add(BtnEdit);
+            tabPagePayModeList.Controls.Add(BtnNew);
+            tabPagePayModeList.Controls.Add(DgPayMode);
+            tabPagePayModeList.Controls.Add(BtnSearch);
+            tabPagePayModeList.Controls.Add(TxtSearch);
+            tabPagePayModeList.Controls.Add(label2);
+            tabPagePayModeList.Location = new Point(4, 34);
+            tabPagePayModeList.Name = "tabPagePayModeList";
+            tabPagePayModeList.Padding = new Padding(3);
+            tabPagePayModeList.Size = new Size(848, 479);
+            tabPagePayModeList.TabIndex = 0;
+            tabPagePayModeList.Text = "Pay Mode List";
+            tabPagePayModeList.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -217,6 +217,26 @@
             tabPagePayModeDetail.Text = "Pay Mode Detail";
             tabPagePayModeDetail.UseVisualStyleBackColor = true;
             // 
+            // BtnCancel
+            // 
+            BtnCancel.BackgroundImage = Properties.Resources.cancel;
+            BtnCancel.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCancel.Location = new Point(135, 410);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(121, 63);
+            BtnCancel.TabIndex = 7;
+            BtnCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnSave
+            // 
+            BtnSave.BackgroundImage = Properties.Resources.save;
+            BtnSave.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnSave.Location = new Point(8, 410);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(121, 63);
+            BtnSave.TabIndex = 6;
+            BtnSave.UseVisualStyleBackColor = true;
+            // 
             // TxtPayModeObservation
             // 
             TxtPayModeObservation.Location = new Point(8, 216);
@@ -256,8 +276,11 @@
             // 
             TxtPayModeId.Location = new Point(8, 31);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(209, 31);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -267,26 +290,6 @@
             label3.Size = new Size(112, 25);
             label3.TabIndex = 0;
             label3.Text = "Pay Mode Id";
-            // 
-            // BtnSave
-            // 
-            BtnSave.BackgroundImage = Properties.Resources.save;
-            BtnSave.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnSave.Location = new Point(8, 410);
-            BtnSave.Name = "BtnSave";
-            BtnSave.Size = new Size(121, 63);
-            BtnSave.TabIndex = 6;
-            BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // BtnCancel
-            // 
-            BtnCancel.BackgroundImage = Properties.Resources.cancel;
-            BtnCancel.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnCancel.Location = new Point(135, 410);
-            BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new Size(121, 63);
-            BtnCancel.TabIndex = 7;
-            BtnCancel.UseVisualStyleBackColor = true;
             // 
             // PayModeView
             // 
@@ -301,8 +304,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
-            tabPageModeList.ResumeLayout(false);
-            tabPageModeList.PerformLayout();
+            tabPagePayModeList.ResumeLayout(false);
+            tabPagePayModeList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).EndInit();
             tabPagePayModeDetail.ResumeLayout(false);
             tabPagePayModeDetail.PerformLayout();
@@ -315,7 +318,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private TabControl tabControl1;
-        private TabPage tabPageModeList;
+        private TabPage tabPagePayModeList;
         private TabPage tabPagePayModeDetail;
         private Button BtnSearch;
         private TextBox TxtSearch;
