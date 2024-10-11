@@ -132,7 +132,20 @@ namespace Supermarket_mvp.Presenters
 
         private void SearchPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var searchValue = view.SearchValue; // Obtiene el valor de búsqueda desde la vista
+
+            if (string.IsNullOrWhiteSpace(searchValue)) // Verifica si searchValue es vacío o solo espacios
+            {
+                // Si está vacío, obtén todos los elementos de la lista de modos de pago
+                payModeList = repository.GetAll();
+            }
+            else
+            {
+                // Si no está vacío, busca por el valor proporcionado
+                payModeList = repository.GetByValue(searchValue); // Busca los modos de pago que coinciden con el valor
+            }
+
+            payModeBindingSource.DataSource = payModeList; // Actualiza el origen de datos
         }
     }
 }

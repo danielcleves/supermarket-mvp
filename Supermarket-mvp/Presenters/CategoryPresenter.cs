@@ -124,9 +124,21 @@ namespace Supermarket_mvp.Presenters
         private void SearchCategory(object? sender, EventArgs e)
         {
             var searchValue = view.SearchValue;
-            categoryList = repository.GetByValue(searchValue);
-            categoryBindingSource.DataSource = categoryList;
+
+            if (string.IsNullOrWhiteSpace(searchValue)) // Verifica si searchValue es vacío o solo espacios
+            {
+                // Si está vacío, obtén todos los elementos de la lista de categorías
+                categoryList = repository.GetAll(); // Suponiendo que tienes un método GetAll en tu repositorio
+            }
+            else
+            {
+                // Si no está vacío, busca por el valor proporcionado
+                categoryList = repository.GetByValue(searchValue);
+            }
+
+            categoryBindingSource.DataSource = categoryList; // Actualiza el origen de datos
         }
+
     }
 
 }

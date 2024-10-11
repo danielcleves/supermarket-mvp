@@ -142,8 +142,22 @@ namespace Supermarket_mvp.Presenters
 
         private void SearchCustomer(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var searchValue = view.SearchValue; // Obtiene el valor de búsqueda desde la vista
+
+            if (string.IsNullOrWhiteSpace(searchValue)) // Verifica si searchValue es vacío o solo espacios
+            {
+                // Si está vacío, obtén todos los clientes
+                customerList = repository.GetAll(); // Suponiendo que tienes un método GetAll en tu repositorio
+            }
+            else
+            {
+                // Si no está vacío, busca por el valor proporcionado
+                customerList = repository.GetByValue(searchValue); // Busca los clientes que coinciden con el valor
+            }
+
+            customerBindingSource.DataSource = customerList; // Actualiza el origen de datos
         }
+
     }
 
 
