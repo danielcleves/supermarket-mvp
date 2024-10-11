@@ -12,7 +12,7 @@ namespace Supermarket_mvp.Models
         void Edit(CustomerModel customerModel);
         void Delete(int id);
         IEnumerable<CustomerModel> GetAll();
-        IEnumerable<CustomerModel> GetByDocumentNumber(string documentNumber);
+        IEnumerable<CustomerModel> GetByValue(string documentNumber);
     }
 
 }
