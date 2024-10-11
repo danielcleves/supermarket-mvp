@@ -20,7 +20,8 @@ namespace Supermarket_mvp.Presenters
             this.sqlConnectionString = sqlConnectionString;
 
             this.mainView.ShowPayModeView += ShowPayModeView;
-            this.mainView.ShowCategoryView += ShowCategoryView; // Agregado para manejar la vista de Category
+            this.mainView.ShowCategoryView += ShowCategoryView; // Manejo de la vista de Category
+            this.mainView.ShowCustomerView += ShowCustomerView; // Agregado para manejar la vista de Customers
         }
 
         private void ShowPayModeView(object? sender, EventArgs e)
@@ -36,6 +37,14 @@ namespace Supermarket_mvp.Presenters
             ICategoryRepository repository = new CategoryRepository(sqlConnectionString); // Crear el repositorio de Category
             new CategoryPresenter(view, repository); // Crear el presentador de Category
         }
+
+        private void ShowCustomerView(object? sender, EventArgs e)
+        {
+            ICustomerView view = CustomerView.GetInstance((MainView)mainView); // Obtener la instancia de la vista de Customers
+            ICustomerRepository repository = new CustomerRepository(sqlConnectionString); // Crear el repositorio de Customers
+            new CustomerPresenter(view, repository); // Crear el presentador de Customers
+        }
     }
+
 
 }

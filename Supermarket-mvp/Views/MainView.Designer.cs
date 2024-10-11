@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnCustomer = new Button();
             BtnCategory = new Button();
             BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(BtnCustomer);
             panel1.Controls.Add(BtnCategory);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
@@ -50,6 +50,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(300, 870);
             panel1.TabIndex = 0;
+            // 
+            // BtnCustomer
+            // 
+            BtnCustomer.BackgroundImage = Properties.Resources.customer;
+            BtnCustomer.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCustomer.Location = new Point(3, 457);
+            BtnCustomer.Name = "BtnCustomer";
+            BtnCustomer.Size = new Size(294, 182);
+            BtnCustomer.TabIndex = 4;
+            BtnCustomer.UseVisualStyleBackColor = true;
             // 
             // BtnCategory
             // 
@@ -93,16 +103,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            button1.BackgroundImage = Properties.Resources.customer;
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(3, 457);
-            button1.Name = "button1";
-            button1.Size = new Size(294, 182);
-            button1.TabIndex = 4;
-            button1.UseVisualStyleBackColor = true;
-            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -125,6 +125,6 @@
         private PictureBox pictureBox1;
         private Button BtnExit;
         private Button BtnCategory;
-        private Button button1;
+        private Button BtnCustomer;
     }
 }
