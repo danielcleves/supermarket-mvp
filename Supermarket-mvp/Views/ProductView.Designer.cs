@@ -169,9 +169,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(11, 6);
             label2.Name = "label2";
-            label2.Size = new Size(148, 25);
+            label2.Size = new Size(131, 25);
             label2.TabIndex = 0;
-            label2.Text = "Search Pay Mode";
+            label2.Text = "Search Product";
             // 
             // tabPageProductDetail
             // 

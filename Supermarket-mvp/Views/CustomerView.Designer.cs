@@ -76,7 +76,7 @@
             tabControl1.Location = new Point(0, 150);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(895, 374);
+            tabControl1.Size = new Size(895, 414);
             tabControl1.TabIndex = 3;
             // 
             // tabPageCustomerList
@@ -92,7 +92,7 @@
             tabPageCustomerList.Location = new Point(4, 34);
             tabPageCustomerList.Name = "tabPageCustomerList";
             tabPageCustomerList.Padding = new Padding(3);
-            tabPageCustomerList.Size = new Size(887, 336);
+            tabPageCustomerList.Size = new Size(887, 376);
             tabPageCustomerList.TabIndex = 0;
             tabPageCustomerList.Text = "Provider List";
             tabPageCustomerList.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             DgCustomers.Name = "DgCustomers";
             DgCustomers.ReadOnly = true;
             DgCustomers.RowHeadersWidth = 62;
-            DgCustomers.Size = new Size(710, 64);
+            DgCustomers.Size = new Size(710, 287);
             DgCustomers.TabIndex = 3;
             // 
             // BtnSearch
@@ -202,7 +202,7 @@
             tabPageCustomerDetail.Location = new Point(4, 34);
             tabPageCustomerDetail.Name = "tabPageCustomerDetail";
             tabPageCustomerDetail.Padding = new Padding(3);
-            tabPageCustomerDetail.Size = new Size(887, 336);
+            tabPageCustomerDetail.Size = new Size(887, 376);
             tabPageCustomerDetail.TabIndex = 1;
             tabPageCustomerDetail.Text = "Provider Detail";
             tabPageCustomerDetail.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.customer;
+            pictureBox1.Image = Properties.Resources.providers;
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(138, 132);
@@ -399,7 +399,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(895, 524);
+            ClientSize = new Size(895, 564);
             Controls.Add(tabControl1);
             Controls.Add(panel1);
             Name = "CustomerView";
