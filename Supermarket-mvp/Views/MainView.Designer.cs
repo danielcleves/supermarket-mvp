@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnProduct = new Button();
             BtnCustomer = new Button();
             BtnCategory = new Button();
             BtnExit = new Button();
@@ -40,6 +41,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnProduct);
             panel1.Controls.Add(BtnCustomer);
             panel1.Controls.Add(BtnCategory);
             panel1.Controls.Add(BtnExit);
@@ -48,12 +50,22 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 870);
+            panel1.Size = new Size(300, 937);
             panel1.TabIndex = 0;
+            // 
+            // BtnProduct
+            // 
+            BtnProduct.BackgroundImage = Properties.Resources.products;
+            BtnProduct.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnProduct.Location = new Point(0, 645);
+            BtnProduct.Name = "BtnProduct";
+            BtnProduct.Size = new Size(294, 182);
+            BtnProduct.TabIndex = 5;
+            BtnProduct.UseVisualStyleBackColor = true;
             // 
             // BtnCustomer
             // 
-            BtnCustomer.BackgroundImage = Properties.Resources.customer;
+            BtnCustomer.BackgroundImage = Properties.Resources.providers;
             BtnCustomer.BackgroundImageLayout = ImageLayout.Zoom;
             BtnCustomer.Location = new Point(3, 457);
             BtnCustomer.Name = "BtnCustomer";
@@ -76,7 +88,7 @@
             BtnExit.BackgroundImage = Properties.Resources.salida1;
             BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
             BtnExit.Dock = DockStyle.Bottom;
-            BtnExit.Location = new Point(0, 801);
+            BtnExit.Location = new Point(0, 868);
             BtnExit.Name = "BtnExit";
             BtnExit.Size = new Size(300, 69);
             BtnExit.TabIndex = 2;
@@ -107,7 +119,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 870);
+            ClientSize = new Size(800, 937);
             Controls.Add(panel1);
             IsMdiContainer = true;
             Name = "MainView";
@@ -126,5 +138,6 @@
         private Button BtnExit;
         private Button BtnCategory;
         private Button BtnCustomer;
+        private Button BtnProduct;
     }
 }
