@@ -49,14 +49,15 @@ namespace Supermarket_mvp.Presenters
 
         private void SaveProduct(object? sender, EventArgs e)
         {
-            var product = new ProductModel
-            {
-                Id = Convert.ToInt32(view.ProductId),
-                Name = view.ProductName,
-                Price = Convert.ToInt32(view.ProductPrice),
-                Stock = Convert.ToInt32(view.ProductStock),
-                CategoryId = Convert.ToInt32(view.ProductCategoryId)
-            };
+            var product = new ProductModel();
+
+            product.Id = Convert.ToInt32(view.ProductId);
+            product.Name = view.ProductName;
+            product.Price = string.IsNullOrWhiteSpace(view.ProductPrice) ? 0 : Convert.ToInt32(view.ProductPrice);
+            product.Stock = string.IsNullOrWhiteSpace(view.ProductStock) ? 0 : Convert.ToInt32(view.ProductStock);
+            product.CategoryId = string.IsNullOrWhiteSpace(view.ProductCategoryId) ? 0 : Convert.ToInt32(view.ProductCategoryId);
+
+
 
             try
             {
