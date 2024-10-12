@@ -39,6 +39,10 @@
             TxtSearch = new TextBox();
             label2 = new Label();
             tabPageCustomerDetail = new TabPage();
+            TxtEmail = new TextBox();
+            label11 = new Label();
+            TxtPhoneNumber = new TextBox();
+            label10 = new Label();
             DtpBirthday = new DateTimePicker();
             label9 = new Label();
             TxtAddress = new TextBox();
@@ -49,8 +53,6 @@
             label6 = new Label();
             BtnCancel = new Button();
             BtnSave = new Button();
-            TxtPayModeObservation = new TextBox();
-            label5 = new Label();
             TxtDocumentNumber = new TextBox();
             label4 = new Label();
             TxtCustomerId = new TextBox();
@@ -58,10 +60,6 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            TxtPhoneNumber = new TextBox();
-            label10 = new Label();
-            TxtEmail = new TextBox();
-            label11 = new Label();
             tabControl1.SuspendLayout();
             tabPageCustomerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomers).BeginInit();
@@ -78,7 +76,7 @@
             tabControl1.Location = new Point(0, 150);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(895, 668);
+            tabControl1.Size = new Size(895, 374);
             tabControl1.TabIndex = 3;
             // 
             // tabPageCustomerList
@@ -94,9 +92,9 @@
             tabPageCustomerList.Location = new Point(4, 34);
             tabPageCustomerList.Name = "tabPageCustomerList";
             tabPageCustomerList.Padding = new Padding(3);
-            tabPageCustomerList.Size = new Size(887, 630);
+            tabPageCustomerList.Size = new Size(887, 336);
             tabPageCustomerList.TabIndex = 0;
-            tabPageCustomerList.Text = "Customer List";
+            tabPageCustomerList.Text = "Provider List";
             tabPageCustomerList.UseVisualStyleBackColor = true;
             // 
             // BtnClose
@@ -150,7 +148,7 @@
             DgCustomers.Name = "DgCustomers";
             DgCustomers.ReadOnly = true;
             DgCustomers.RowHeadersWidth = 62;
-            DgCustomers.Size = new Size(710, 358);
+            DgCustomers.Size = new Size(710, 64);
             DgCustomers.TabIndex = 3;
             // 
             // BtnSearch
@@ -177,9 +175,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(11, 6);
             label2.Name = "label2";
-            label2.Size = new Size(148, 25);
+            label2.Size = new Size(135, 25);
             label2.TabIndex = 0;
-            label2.Text = "Search Pay Mode";
+            label2.Text = "Search Provider";
             // 
             // tabPageCustomerDetail
             // 
@@ -197,8 +195,6 @@
             tabPageCustomerDetail.Controls.Add(label6);
             tabPageCustomerDetail.Controls.Add(BtnCancel);
             tabPageCustomerDetail.Controls.Add(BtnSave);
-            tabPageCustomerDetail.Controls.Add(TxtPayModeObservation);
-            tabPageCustomerDetail.Controls.Add(label5);
             tabPageCustomerDetail.Controls.Add(TxtDocumentNumber);
             tabPageCustomerDetail.Controls.Add(label4);
             tabPageCustomerDetail.Controls.Add(TxtCustomerId);
@@ -206,10 +202,44 @@
             tabPageCustomerDetail.Location = new Point(4, 34);
             tabPageCustomerDetail.Name = "tabPageCustomerDetail";
             tabPageCustomerDetail.Padding = new Padding(3);
-            tabPageCustomerDetail.Size = new Size(887, 630);
+            tabPageCustomerDetail.Size = new Size(887, 336);
             tabPageCustomerDetail.TabIndex = 1;
-            tabPageCustomerDetail.Text = "Customer Detail";
+            tabPageCustomerDetail.Text = "Provider Detail";
             tabPageCustomerDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtEmail
+            // 
+            TxtEmail.Location = new Point(440, 276);
+            TxtEmail.Name = "TxtEmail";
+            TxtEmail.PlaceholderText = "Email";
+            TxtEmail.Size = new Size(412, 31);
+            TxtEmail.TabIndex = 19;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(440, 248);
+            label11.Name = "label11";
+            label11.Size = new Size(54, 25);
+            label11.TabIndex = 18;
+            label11.Text = "Email";
+            // 
+            // TxtPhoneNumber
+            // 
+            TxtPhoneNumber.Location = new Point(440, 214);
+            TxtPhoneNumber.Name = "TxtPhoneNumber";
+            TxtPhoneNumber.PlaceholderText = "Phone Number";
+            TxtPhoneNumber.Size = new Size(412, 31);
+            TxtPhoneNumber.TabIndex = 17;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(440, 186);
+            label10.Name = "label10";
+            label10.Size = new Size(132, 25);
+            label10.TabIndex = 16;
+            label10.Text = "Phone Number";
             // 
             // DtpBirthday
             // 
@@ -283,7 +313,7 @@
             // 
             BtnCancel.BackgroundImage = Properties.Resources.cancel;
             BtnCancel.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnCancel.Location = new Point(135, 558);
+            BtnCancel.Location = new Point(135, 251);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.Size = new Size(121, 63);
             BtnCancel.TabIndex = 7;
@@ -293,29 +323,11 @@
             // 
             BtnSave.BackgroundImage = Properties.Resources.save;
             BtnSave.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnSave.Location = new Point(8, 558);
+            BtnSave.Location = new Point(8, 251);
             BtnSave.Name = "BtnSave";
             BtnSave.Size = new Size(121, 63);
             BtnSave.TabIndex = 6;
             BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // TxtPayModeObservation
-            // 
-            TxtPayModeObservation.Location = new Point(8, 364);
-            TxtPayModeObservation.Multiline = true;
-            TxtPayModeObservation.Name = "TxtPayModeObservation";
-            TxtPayModeObservation.PlaceholderText = "Pay Mode Observation";
-            TxtPayModeObservation.Size = new Size(412, 188);
-            TxtPayModeObservation.TabIndex = 5;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(8, 336);
-            label5.Name = "label5";
-            label5.Size = new Size(193, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Pay Mode Observation";
             // 
             // TxtDocumentNumber
             // 
@@ -349,9 +361,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(8, 3);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(101, 25);
             label3.TabIndex = 0;
-            label3.Text = "Pay Mode Id";
+            label3.Text = "Provider ID";
             // 
             // panel1
             // 
@@ -379,49 +391,15 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(156, 47);
             label1.Name = "label1";
-            label1.Size = new Size(205, 54);
+            label1.Size = new Size(184, 54);
             label1.TabIndex = 0;
-            label1.Text = "Customer";
-            // 
-            // TxtPhoneNumber
-            // 
-            TxtPhoneNumber.Location = new Point(440, 214);
-            TxtPhoneNumber.Name = "TxtPhoneNumber";
-            TxtPhoneNumber.PlaceholderText = "Phone Number";
-            TxtPhoneNumber.Size = new Size(412, 31);
-            TxtPhoneNumber.TabIndex = 17;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(440, 186);
-            label10.Name = "label10";
-            label10.Size = new Size(132, 25);
-            label10.TabIndex = 16;
-            label10.Text = "Phone Number";
-            // 
-            // TxtEmail
-            // 
-            TxtEmail.Location = new Point(440, 276);
-            TxtEmail.Name = "TxtEmail";
-            TxtEmail.PlaceholderText = "Email";
-            TxtEmail.Size = new Size(412, 31);
-            TxtEmail.TabIndex = 19;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(440, 248);
-            label11.Name = "label11";
-            label11.Size = new Size(54, 25);
-            label11.TabIndex = 18;
-            label11.Text = "Email";
+            label1.Text = "Provider";
             // 
             // CustomerView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(895, 818);
+            ClientSize = new Size(895, 524);
             Controls.Add(tabControl1);
             Controls.Add(panel1);
             Name = "CustomerView";
@@ -453,8 +431,6 @@
         private TabPage tabPageCustomerDetail;
         private Button BtnCancel;
         private Button BtnSave;
-        private TextBox TxtPayModeObservation;
-        private Label label5;
         private TextBox TxtDocumentNumber;
         private Label label4;
         private TextBox TxtCustomerId;

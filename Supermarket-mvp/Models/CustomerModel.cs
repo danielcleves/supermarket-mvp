@@ -10,7 +10,7 @@ namespace Supermarket_mvp.Models
 {
     internal class CustomerModel
     {
-        [DisplayName("Customer Id")]
+        [DisplayName("Provides Id")]
         public int Id { get; set; }
 
         [DisplayName("Document Number")]
