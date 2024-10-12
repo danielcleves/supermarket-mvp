@@ -184,11 +184,6 @@ namespace Supermarket_mvp.Views
             }
             return instance;
         }
-
-        private void TxtProductName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
