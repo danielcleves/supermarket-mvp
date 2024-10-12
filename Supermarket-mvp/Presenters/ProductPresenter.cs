@@ -53,9 +53,9 @@ namespace Supermarket_mvp.Presenters
 
             product.Id = Convert.ToInt32(view.ProductId);
             product.Name = view.ProductName;
-            product.Price = string.IsNullOrWhiteSpace(view.ProductPrice) ? 0 : Convert.ToInt32(view.ProductPrice);
-            product.Stock = string.IsNullOrWhiteSpace(view.ProductStock) ? 0 : Convert.ToInt32(view.ProductStock);
-            product.CategoryId = string.IsNullOrWhiteSpace(view.ProductCategoryId) ? 0 : Convert.ToInt32(view.ProductCategoryId);
+            product.Price = string.IsNullOrWhiteSpace(view.ProductPrice) ? -1 : Convert.ToInt32(view.ProductPrice);
+            product.Stock = string.IsNullOrWhiteSpace(view.ProductStock) ? -1 : Convert.ToInt32(view.ProductStock);
+            product.CategoryId = string.IsNullOrWhiteSpace(view.ProductCategoryId) ? -1 : Convert.ToInt32(view.ProductCategoryId);
 
 
 
